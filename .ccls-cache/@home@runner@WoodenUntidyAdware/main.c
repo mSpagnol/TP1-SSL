@@ -1,3 +1,7 @@
+/*
+Alumno: Spagnol, Martín.
+Curso: K2002
+*/
 #include <stdio.h>
 #include <ctype.h>
 
