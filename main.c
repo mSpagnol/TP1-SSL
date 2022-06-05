@@ -6,19 +6,20 @@ Curso: K2002
 #include <ctype.h>
 
 int main(void) {
-    char palabra [100];
     int i;  
     printf("Escriba una palabra: ");
-    do{
-      palabra[i] = getchar();
-       if(isupper(palabra[i])){
-         palabra[i] = tolower(palabra[i]);
-       }else if (islower(palabra[i])){
-         palabra[i] = toupper(palabra[i]);
-      } else if (isdigit(palabra[i])){
-         palabra[i] = " ";
+    while (1)
+    {
+      int caracter = getchar();
+      if(isupper(caracter)){
+        putchar(tolower(caracter));
+      }else if(islower(caracter)){
+        putchar(toupper(caracter));
+      }else if(isdigit(caracter)){
+
+      }else{
+        putchar(caracter);
       }
-      putchar(palabra[i]);
-    }while(palabra > 0);
-    return 0;
+
+    }
 }
