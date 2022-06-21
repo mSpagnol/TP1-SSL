@@ -6,20 +6,35 @@ Curso: K2002
 #include <ctype.h>
 
 int main(void) {
-    int i;  
-    printf("Escriba una palabra: ");
-    while (1)
-    {
-      int caracter = getchar();
-      if(isupper(caracter)){
-        putchar(tolower(caracter));
-      }else if(islower(caracter)){
-        putchar(toupper(caracter));
-      }else if(isdigit(caracter)){
+  
+    int caracter; 
 
-      }else{
+    printf("Escriba una palabra: ");
+
+    caracter = getchar();
+
+    while (caracter != EOF)
+    {
+      
+      int acceso = 0;
+
+      if(isupper(caracter)){
+        acceso = 1;
+        putchar(tolower(caracter));
+        }
+
+      if(islower(caracter)){
+        acceso = 1;
+        putchar(toupper(caracter));
+      }
+
+      if(!(isdigit(caracter)) && acceso != 1){
         putchar(caracter);
       }
 
+      caracter = getchar();
+
     }
+
+    return 0;
 }
